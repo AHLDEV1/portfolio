@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arthur H. L. Conti | Portfólio</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Arthur H. L. Conti</h1>
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <img src="https://via.placeholder.com/120" alt="Foto de perfil" />
+    <h1>Arthur Henrique Laureano Conti</h1>
+    <p>Desenvolvedor em formação | ADS | Bootcamp Orange Tech+</p>
   </header>
 
-  <section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>Olá! Me chamo <strong>Arthur Henrique Laureano Conti</strong>, estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong> na UNIASSELVI e participando do bootcamp <strong>Orange Tech+ by Inter</strong>, com foco em JavaScript, HTML, CSS, TypeScript e React.</p>
-    <p>Tenho experiência com <strong>Python, JavaScript, PHP e SQL</strong>, e vivência com atendimento ao cliente e supervisão administrativa. Estou em transição de carreira, buscando oportunidades para crescer e aprender.</p>
+  <nav>
+    <a href="#sobre">Sobre mim</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+    <a href="./curriculo-arthur.pdf" download>
+      <button class="download-btn">📄 Baixar Currículo</button>
+    </a>
+  </nav>
+
+  <section id="sobre" class="section">
+    <h2>Sobre mim</h2>
+    <p>Atualmente estou cursando Análise e Desenvolvimento de Sistemas pela UNIASSELVI e participando do bootcamp Orange Tech+ By Inter. Tenho conhecimento básico em Git, JavaScript, Python e estou em constante evolução. Me interesso por entender como funcionam os sistemas e gosto de resolver problemas.</p>
   </section>
 
-  <section id="projetos">
+  <section id="projetos" class="section">
     <h2>Projetos</h2>
-    <div class="carousel">
-      <div class="carousel-item">Portfólio Pessoal - HTML, CSS, JavaScript</div>
-      <div class="carousel-item">Consulta CNPJ - Python + Google Sheets</div>
-      <div class="carousel-item">Chatbot Odonto - n8n + WhatsApp (UltraMsg)</div>
+    <div class="projects-carousel">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/250x140" alt="Projeto 1" />
+        <h3>Projeto 1</h3>
+        <p>Descrição breve do projeto 1.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/250x140" alt="Projeto 2" />
+        <h3>Projeto 2</h3>
+        <p>Descrição breve do projeto 2.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/250x140" alt="Projeto 3" />
+        <h3>Projeto 3</h3>
+        <p>Descrição breve do projeto 3.</p>
+      </div>
     </div>
   </section>
 
-  <section id="contato">
+  <section id="contato" class="section">
     <h2>Contato</h2>
-    <ul>
-      <li>Email: arthur.conti.17@gmail.com</li>
-      <li><a href="https://www.linkedin.com/in/arthur-henrique-laureano-conti-4b577919b" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://github.com/AHLDEV1" target="_blank" rel="noopener">GitHub</a></li>
-      <li><a href="https://wa.me/5511913364795" target="_blank" rel="noopener">WhatsApp</a></li>
-    </ul>
+    <p>Email: <a href="mailto:arthur.conti.17@gmail.com">arthur.conti.17@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/arthur-henrique-laureano-conti-4b577919b">/arthur-henrique-laureano-conti</a></p>
+    <p>GitHub: <a href="https://github.com/AHLDEV1">@AHLDEV1</a></p>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Arthur H. L. Conti</p>
-  </footer>
 </body>
 </html>
