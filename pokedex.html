@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pokedex - Detalhes do Projeto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/pokedex.css" />
+</head>
+
+<body>
+  <canvas id="pokemon-canvas"></canvas>
+
+  <main class="conteudo">
+    <h1>Pokedex</h1>
+
+    <section class="descricao">
+  <p>
+    A Pokedex é um projeto desenvolvido com HTML, CSS e JavaScript, utilizando a PokéAPI para listar, filtrar e
+    exibir detalhes dos Pokémons de maneira dinâmica e visualmente atrativa.  
+    <br><br>
+    É um dos meus primeiros projetos, básico, criado principalmente para colocar em prática alguns conhecimentos iniciais de desenvolvimento web.
+  </p>
+</section>
+
+    <section class="fotos">
+      <div class="galeria">
+        <img src="img/p1.png" alt="Imagem do projeto 1" />
+        <img src="img/p2.png" alt="Imagem do projeto 2" />
+        <img src="img/p3.png" alt="Imagem do projeto 3" />
+      </div>
+    </section>
+
+    <section class="github">
+      <a href="https://github.com/AHLDEV1/Pokedex_2024.git" target="_blank" rel="noopener noreferrer" class="btn-github">
+        🔗 Ver no GitHub
+      </a>
+    </section>
+
+    
+    <a href="javascript:history.back()" class="btn-voltar">← Voltar</a>
+  </main>
+
+  <script>
+    const canvas = document.getElementById('pokemon-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let width, height;
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    const pokeballSrc = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png';
+
+    class Pokeball {
+      constructor() {
+        this.img = new Image();
+        this.img.src = pokeballSrc;
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = 30 + Math.random() * 20;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5;
+        this.angle = 0;
+        this.rotationSpeed = (Math.random() - 0.5) * 0.02;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.angle += this.rotationSpeed;
+
+        if (this.x > width) this.x = 0;
+        else if (this.x < 0) this.x = width;
+        if (this.y > height) this.y = 0;
+        else if (this.y < 0) this.y = height;
+      }
+
+      draw(ctx) {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.angle);
+        ctx.drawImage(this.img, -this.size / 2, -this.size / 2, this.size, this.size);
+        ctx.restore();
+      }
+    }
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.radius = Math.random() * 1.5 + 0.5;
+        this.speedY = Math.random() * 0.3 + 0.1;
+        this.opacity = Math.random() * 0.5 + 0.1;
+      }
+
+      update() {
+        this.y -= this.speedY;
+        if (this.y < 0) {
+          this.y = height;
+          this.x = Math.random() * width;
+        }
+      }
+
+      draw(ctx) {
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(88, 166, 255, ${this.opacity})`;
+        ctx.shadowColor = '#58a6ff';
+        ctx.shadowBlur = 5;
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    const pokeballs = [];
+    const particles = [];
+
+    for (let i = 0; i < 15; i++) {
+      pokeballs.push(new Pokeball());
+    }
+
+    for (let i = 0; i < 80; i++) {
+      particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      const gradient = ctx.createLinearGradient(0, 0, 0, height);
+      gradient.addColorStop(0, '#0e1a2b');
+      gradient.addColorStop(1, '#000');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, width, height);
+
+      particles.forEach(p => {
+        p.update();
+        p.draw(ctx);
+      });
+
+      pokeballs.forEach(pb => {
+        pb.update();
+        pb.draw(ctx);
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+
+</html>

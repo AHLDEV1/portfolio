@@ -5,33 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Arthur H. L. Conti | Projetos</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    .faixa-construcao {
+      width: 100%;
+      background-color: #ffc107;
+      color: #212121;
+      text-align: center;
+      padding: 1rem 0;
+      font-weight: 700;
+      font-size: 1.3rem;
+      animation: pulse 2s infinite;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.85; }
+      100% { opacity: 1; }
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #00bcd4;
+    }
+
+    .apresentacao {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .btn-group {
+      margin-top: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #00bcd4;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0097a7;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Projetos</h1>
-  </header>
 
-  <section class="section projects-carousel">
-    <div class="project-card">
-      <img src="https://via.placeholder.com/250x140" alt="Projeto 1" />
-      <h3>Projeto 1</h3>
-      <p>Descrição breve do projeto 1.</p>
-    </div>
-    <div class="project-card">
-      <img src="https://via.placeholder.com/250x140" alt="Projeto 2" />
-      <h3>Projeto 2</h3>
-      <p>Descrição breve do projeto 2.</p>
-    </div>
-    <div class="project-card">
-      <img src="https://via.placeholder.com/250x140" alt="Projeto 3" />
-      <h3>Projeto 3</h3>
-      <p>Descrição breve do projeto 3.</p>
-    </div>
-  </section>
-
-  <div class="btn-group">
-    <a href="index.html" class="btn">← Voltar</a>
+  <div class="faixa-construcao">
+    🚧 Esta página está em construção 🚧
   </div>
+
+  <div class="container">
+    <header>
+      <h1>Projetos</h1>
+      <p class="apresentacao">
+        Bem-vindo à minha galeria de projetos! Em breve, você poderá explorar os trabalhos que desenvolvi utilizando tecnologias como HTML, CSS, JavaScript e APIs.
+      </p>
+    </header>
+
+    <div class="btn-group">
+      <a href="index.html" class="btn">← Voltar</a>
+    </div>
+  </div>
+
 </body>
 </html>

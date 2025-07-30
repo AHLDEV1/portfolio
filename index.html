@@ -1,27 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Arthur H. L. Conti | Sobre Mim</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
+  <canvas id="background-canvas"></canvas>
+
   <header>
-    <img src="https://via.placeholder.com/120" alt="Foto de perfil" />
-    <h1>Arthur Henrique Laureano Conti</h1>
-    <p>Desenvolvedor em formação | ADS | Bootcamp Orange Tech+</p>
+    <div class="perfil">
+      <img src="img/minha-foto.jpg" alt="Foto de perfil" />
+      <div>
+        <h1>Arthur Henrique Laureano Conti</h1>
+        <p>
+          Desenvolvedor em formação | ADS |
+          <a href="https://web.dio.me/track/orange-tech" target="_blank" rel="noopener" class="bootcamp-link">Bootcamp Orange Tech+</a>
+        </p>
+      </div>
+    </div>
+
+<div class="btn-group">
+  <a href="projetos.html" class="btn btn-projetos">Projetos</a>
+  <a href="contato.html" class="btn btn-contato">Contato</a>
+  <a href="docs/Arthur Henrique.pdf" download="Arthur Henrique Laureano Conti.pdf" class="btn btn-curriculo">Baixar Currículo</a>
+</div>
+
   </header>
 
   <main class="section" id="sobre">
     <h2>Sobre mim</h2>
-    <p>Atualmente estou cursando Análise e Desenvolvimento de Sistemas pela UNIASSELVI e participando do bootcamp Orange Tech+ By Inter. Tenho conhecimento básico em Git, JavaScript, Python e estou em constante evolução. Me interesso por entender como funcionam os sistemas e gosto de resolver problemas.</p>
-
-    <div class="btn-group">
-      <a href="projetos.html" class="btn">Projetos</a>
-      <a href="contato.html" class="btn">Contato</a>
-    </div>
+    <p>
+      Sou apaixonado por tecnologia e estou em constante busca de aprendizado e desenvolvimento profissional. Iniciei minha trajetória na área técnica com um curso de montagem e desenvolvimento de computadores, o que despertou ainda mais meu interesse pelo universo da informática. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas, com previsão de conclusão em dezembro de 2025, participo do bootcamp Orange Tech+ By Inter e tenho planos de migrar futuramente para Engenharia de Software.
+    </p>
+    <p>
+      Possuo conhecimentos básicos em HTML, CSS, JavaScript, Git e GitHub. Apesar de ainda não ter atuado profissionalmente com essas tecnologias, venho me dedicando por meio de cursos, bootcamps e estudos próprios, buscando aplicar o que aprendo em projetos pessoais.
+    </p>
+    <p>
+      Minha experiência profissional é bastante diversificada. Já atuei com vendas de calçados, trabalhei como backoffice em telemarketing gerando contratos e realizando controles por meio de planilhas, e também como auxiliar de escritório, onde desempenhei tarefas como montagem de computadores, troca de periféricos, instalação de softwares e, quando necessário, suporte básico à rede da empresa. Atualmente, atuo como líder administrativo em uma empresa de teleatendimento.
+    </p>
+    <p>
+      Estou em busca da minha primeira oportunidade na área de tecnologia, onde poderei aplicar meus conhecimentos, aprender na prática, colaborar com a equipe e crescer profissionalmente junto com a empresa.
+    </p>
   </main>
+
+  <main class="section" id="carta-apresentacao">
+    <h2>Carta de Apresentação</h2>
+    <p>Prezado(a) recrutador(a),</p>
+    <p>
+      Estou me candidatando à vaga na área de Tecnologia da Informação conforme anunciado. Atualmente, sou estudante de Análise e Desenvolvimento de Sistemas e tenho grande interesse em evoluir na área, com o objetivo de migrar futuramente para o curso de Engenharia de Software, aprofundando ainda mais meus conhecimentos e habilidades técnicas.
+    </p>
+    <p>
+      Tenho conhecimentos básicos em Git, JavaScript e Python, e estou sempre estudando para melhorar. Tenho facilidade para aprender coisas novas e gosto muito de tecnologia. Meu objetivo é ajudar no que for possível e crescer profissionalmente junto com a empresa.
+    </p>
+    <p>
+      Estou à disposição para conversar e mostrar minha vontade de fazer parte do time.
+    </p>
+    <p>Atenciosamente,<br />Arthur Henrique Laureano Conti</p>
+  </main>
+
+  <script src="assets/js/particles.js"></script>
 </body>
+
 </html>

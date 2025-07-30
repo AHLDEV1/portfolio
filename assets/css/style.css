@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  background: #0a0a23;
+  overflow-x: hidden;
+  position: relative;
+}
+
+
+#background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+header p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.btn {
+  color: white;
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn-projetos:hover {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.btn-contato:hover {
+  background-color: #6b7280;
+  border-color: #6b7280;
+}
+
+.btn-curriculo:hover {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.section {
+  padding: 2rem;
+  max-width: 720px;
+  margin: 2rem auto;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.section h2 {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #a6e3e9;
+}
+
+.section p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #eee;
+  margin-bottom: 1.2rem;
+}
+
+.bootcamp-link {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.bootcamp-link:hover {
+  color: orange;
+}
